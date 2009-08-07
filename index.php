@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css">
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/base/base-min.css"> 
 	<style type="text/css" media="screen">
-	   .button {
+	   button {
 	       -moz-border-radius: 5px;
 	       background: red;
 	       border: 3px solid black;
@@ -40,7 +40,7 @@
                 $("audio").removeAttr("controls").each(function(i, audioElement) {
                     var audio = $(this);
                     var that = this; //closure to keep reference to current audio tag
-                    $("#doc").append($('<button class="button">'+audio.attr("title")+'</button>').click(function() {
+                    $("#doc").append($('<button>'+audio.attr("title")+'</button>').click(function() {
                         that.play();
                     }));
                 });
