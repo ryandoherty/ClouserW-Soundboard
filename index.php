@@ -38,9 +38,9 @@
         <script type="text/javascript" charset="utf-8">
             $(function() {
                 $("audio").removeAttr("controls").each(function(i, audioElement) {
-                    var audio = $(audioElement);
-                    var that = this;
-                    $("#doc").append($('<div class="button">'+audio.attr("title")+'</div>').click(function() {
+                    var audio = $(this);
+                    var that = this; //closure to keep reference to current audio tag
+                    $("#doc").append($('<button class="button">'+audio.attr("title")+'</button>').click(function() {
                         that.play();
                     }));
                 });
